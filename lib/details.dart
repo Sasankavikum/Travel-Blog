@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:travel_blog/model/travel.dart';
 
 class DetailPage extends StatelessWidget {
@@ -13,7 +14,30 @@ class DetailPage extends StatelessWidget {
         body: Stack(
       children: [
         CustomScrollView(
-          slivers: [_buildSilverHead()],
+          slivers: [
+            _buildSilverHead(),
+            SliverToBoxAdapter(
+              child: _buildDetail(),
+            )
+          ],
+        ),
+        Padding(
+          padding: EdgeInsets.only(
+              top: MediaQuery.of(context).padding.top, right: 15, left: 15),
+          child: SizedBox(
+            height: kToolbarHeight,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).pop();
+                    },
+                    child: Icon(Icons.arrow_back, color: Colors.white)),
+                Icon(Icons.menu, color: Colors.white)
+              ],
+            ),
+          ),
         )
       ],
     ));
@@ -25,6 +49,59 @@ class DetailPage extends StatelessWidget {
             travel: travel,
             expandedHeight: expandedHeight,
             roundedContainerHeight: roundedContainerHeight));
+  }
+
+  Widget _buildDetail() {
+    return Container(
+      color: Colors.white,
+      child: Column(
+        children: [
+          _buildUserInfo(),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildUserInfo() {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+      child: Row(
+        children: [
+          ClipRRect(
+            borderRadius: BorderRadius.circular(50),
+            child: Image.asset(
+              travel.url,
+              width: 50,
+              height: 50,
+              fit: BoxFit.cover,
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 10),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  travel.name,
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  travel.location,
+                  style: TextStyle(
+                    fontSize: 16,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Spacer(),
+          Icon(
+            Icons.share,
+            color: Colors.grey,
+          )
+        ],
+      ),
+    );
   }
 }
 
@@ -64,7 +141,21 @@ class DetailSliverDelegate extends SliverPersistentHeaderDelegate {
                   topRight: Radius.circular(30),
                 )),
           ),
-        )
+        ),
+        Positioned(
+            top: expandedHeight - shrinkOffset - 120,
+            left: 30,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(travel.name,
+                    style: TextStyle(color: Colors.white, fontSize: 30)),
+                Text(
+                  travel.location,
+                  style: TextStyle(color: Colors.white, fontSize: 15),
+                )
+              ],
+            ))
       ],
     );
   }
