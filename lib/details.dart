@@ -57,6 +57,47 @@ class DetailPage extends StatelessWidget {
       child: Column(
         children: [
           _buildUserInfo(),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
+            child: Text(
+              'aaaaaaaa aaaaaaaa a a a aaaaaaaa aaaaaaa aaaaaaa aaaaaa aaaaaaaa aaaaaa aaaaaaa aaaaaa aaaaaaaa aaaaaa aaaaaa aaaa aaaaa aaaaaa aaaaaa aaaaaaaaaa aaaaaaaa aaaaaaa aaaaaaa a aaaaaa aaaaaaaa aaaaaaaa aaaaaaa aaaaaaaa aaaaaaaa aaaaaaa aaaaaaa aaa aaaaaaa aaaa aaaaaa aaaa aaaaa aaaaa aaaaa a aaaaaa a aaaaaa a aaa aaaaaaa aaaaaa aa',
+              style: TextStyle(color: Colors.grey, fontSize: 16, height: 1.5),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  'Features',
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                      letterSpacing: 1.5),
+                ),
+                Text(
+                  'View All',
+                  style: TextStyle(
+                    color: Colors.orange,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          SizedBox(
+            height: 180,
+            child: FeatureWidget(),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
+            child: Text(
+              'aaaaaaaa aaaaaaaa a a a aaaaaaaa aaaaaaa aaaaaaa aaaaaa aaaaaaaa aaaaaa aaaaaaa aaaaaa aaaaaaaa aaaaaa aaaaaa aaaa aaaaa aaaaaa aaaaaa aaaaaaaaaa aaaaaaaa aaaaaaa aaaaaaa a aaaaaa aaaaaaaa aaaaaaaa aaaaaaa aaaaaaaa aaaaaaaa aaaaaaa aaaaaaa aaa aaaaaaa aaaa aaaaaa aaaa aaaaa aaaaa aaaaa a aaaaaa a aaaaaa a aaa aaaaaaa aaaaaa aa',
+              style: TextStyle(color: Colors.grey, fontSize: 16, height: 1.5),
+            ),
+          ),
         ],
       ),
     );
@@ -171,5 +212,28 @@ class DetailSliverDelegate extends SliverPersistentHeaderDelegate {
   @override
   bool shouldRebuild(covariant SliverPersistentHeaderDelegate oldDelegate) {
     return true;
+  }
+}
+
+class FeatureWidget extends StatelessWidget {
+  final _list = Travel.generateMostPopular();
+  @override
+  Widget build(BuildContext context) {
+    return ListView.separated(
+        padding: EdgeInsets.only(top: 20, left: 20, bottom: 10),
+        scrollDirection: Axis.horizontal,
+        itemBuilder: (context, index) {
+          var travel = _list[index];
+          return Container(
+            height: 100,
+            width: 120,
+            child: Image.asset(
+              travel.url,
+              fit: BoxFit.cover,
+            ),
+          );
+        },
+        separatorBuilder: (_, index) => SizedBox(width: 10),
+        itemCount: _list.length);
   }
 }
