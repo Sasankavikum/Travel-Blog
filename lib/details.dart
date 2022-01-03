@@ -60,7 +60,7 @@ class DetailPage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
             child: Text(
-              'aaaaaaaa aaaaaaaa a a a aaaaaaaa aaaaaaa aaaaaaa aaaaaa aaaaaaaa aaaaaa aaaaaaa aaaaaa aaaaaaaa aaaaaa aaaaaa aaaa aaaaa aaaaaa aaaaaa aaaaaaaaaa aaaaaaaa aaaaaaa aaaaaaa a aaaaaa aaaaaaaa aaaaaaaa aaaaaaa aaaaaaaa aaaaaaaa aaaaaaa aaaaaaa aaa aaaaaaa aaaa aaaaaa aaaa aaaaa aaaaa aaaaa a aaaaaa a aaaaaa a aaa aaaaaaa aaaaaa aa',
+              travel.description,
               style: TextStyle(color: Colors.grey, fontSize: 16, height: 1.5),
             ),
           ),
@@ -94,8 +94,8 @@ class DetailPage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
             child: Text(
-              'aaaaaaaa aaaaaaaa a a a aaaaaaaa aaaaaaa aaaaaaa aaaaaa aaaaaaaa aaaaaa aaaaaaa aaaaaa aaaaaaaa aaaaaa aaaaaa aaaa aaaaa aaaaaa aaaaaa aaaaaaaaaa aaaaaaaa aaaaaaa aaaaaaa a aaaaaa aaaaaaaa aaaaaaaa aaaaaaa aaaaaaaa aaaaaaaa aaaaaaa aaaaaaa aaa aaaaaaa aaaa aaaaaa aaaa aaaaa aaaaa aaaaa a aaaaaa a aaaaaa a aaa aaaaaaa aaaaaa aa',
-              style: TextStyle(color: Colors.grey, fontSize: 16, height: 1.5),
+              'Reference from GOOGLE',
+              style: TextStyle(color: Colors.grey, fontSize: 10, height: 1.5),
             ),
           ),
         ],
