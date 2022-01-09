@@ -40,7 +40,7 @@ class HomePage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  'Common Places',
+                  'Most Popular',
                   style: TextStyle(fontSize: 20),
                 ),
                 Text(
