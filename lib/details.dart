@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:travel_blog/map_utils.dart';
 import 'package:travel_blog/model/travel.dart';
 
 class DetailPage extends StatelessWidget {
@@ -93,9 +94,27 @@ class DetailPage extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
-            child: Text(
-              'Reference from GOOGLE',
-              style: TextStyle(color: Colors.grey, fontSize: 10, height: 1.5),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  'Reference from GOOGLE',
+                  style:
+                      TextStyle(color: Colors.grey, fontSize: 10, height: 1.5),
+                ),
+                TextButton(
+                  style: TextButton.styleFrom(backgroundColor: Colors.red),
+                  onPressed: () {
+                    MapUtils.openMap(travel.latitude, travel.longitude);
+                  },
+                  child: Text(
+                    'Open In Google Maps',
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
         ],
@@ -237,3 +256,16 @@ class FeatureWidget extends StatelessWidget {
         itemCount: _list.length);
   }
 }
+
+// class GoogleMap extends StatelessWidget {
+//   const GoogleMap({Key? key}) : super(key: key);
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return SafeArea(
+//       child: Scaffold(
+//         body: Container(),
+//       ),
+//     );
+//   }
+// }
