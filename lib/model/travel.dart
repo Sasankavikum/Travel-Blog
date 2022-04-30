@@ -144,6 +144,13 @@ class Travel {
           "Unawatuna is one of Sri Lanka's most popular tourist sites and the country's most 'renowned' beach. It's a beautiful banana-shaped beach with golden sand and blue sea, all encircled by lush green palm trees! It was our first stop on the island of Sri Lanka. We opted for a guesthouse a few kilometers away from the beach of Unawatuna, rather than one of the posh and pricey hotels near the beach. On two different day outings, we walked to Unawatuna Beach.",
           6.009851276890086,
           80.24837310439976),
+      Travel(
+          'Kuragala',
+          'Balangoda',
+          'assets/images/kuragala.jpg',
+          "Unawatuna is one of Sri Lanka's most popular tourist sites and the country's most 'renowned' beach. It's a beautiful banana-shaped beach with golden sand and blue sea, all encircled by lush green palm trees! It was our first stop on the island of Sri Lanka. We opted for a guesthouse a few kilometers away from the beach of Unawatuna, rather than one of the posh and pricey hotels near the beach. On two different day outings, we walked to Unawatuna Beach.",
+          6.009851276890086,
+          80.24837310439976),
     ];
   }
 
@@ -321,6 +328,20 @@ class Travel {
           'Lipton Seat',
           'Haputale',
           'assets/images/lipton seat.webp',
+          "The most popular attraction in Haputale is Lipton's Seat. Lipton's Seat is a viewpoint named after the famous Thomas Lipton and is about an hour from Haputale town. He was a Scottish trader who traveled to British Ceylon in 1890 and met James Taylor, with whom he collaborated to establish tea gardens to the nation. Taylor had attempted to cultivate coffee on the island before to Lipton's arrival, but the crops were destroyed by a leaf-blight. The two men began on a commercial enterprise that would outlast their lives with Lipton's assistance. Thomas Lipton would sit with a cup of tea in hand and proudly look over his land from Lipton's Seat, a popular vantage point. The overlook still offers one of the greatest views, and there's even a life-sized statue of Lipton on a seat where you can snap photos! It is best to visit early in the morning to escape the crowds and late-morning fog.",
+          7.23905648457663,
+          79.8402454549134),
+      Travel(
+          'Diyawini Ella',
+          'Haputale',
+          'assets/images/diyawini ella.webp',
+          "The most popular attraction in Haputale is Lipton's Seat. Lipton's Seat is a viewpoint named after the famous Thomas Lipton and is about an hour from Haputale town. He was a Scottish trader who traveled to British Ceylon in 1890 and met James Taylor, with whom he collaborated to establish tea gardens to the nation. Taylor had attempted to cultivate coffee on the island before to Lipton's arrival, but the crops were destroyed by a leaf-blight. The two men began on a commercial enterprise that would outlast their lives with Lipton's assistance. Thomas Lipton would sit with a cup of tea in hand and proudly look over his land from Lipton's Seat, a popular vantage point. The overlook still offers one of the greatest views, and there's even a life-sized statue of Lipton on a seat where you can snap photos! It is best to visit early in the morning to escape the crowds and late-morning fog.",
+          7.23905648457663,
+          79.8402454549134),
+      Travel(
+          'Hunugal Pokuna',
+          'Haputale',
+          'assets/images/hunugal pokuna.JPG',
           "The most popular attraction in Haputale is Lipton's Seat. Lipton's Seat is a viewpoint named after the famous Thomas Lipton and is about an hour from Haputale town. He was a Scottish trader who traveled to British Ceylon in 1890 and met James Taylor, with whom he collaborated to establish tea gardens to the nation. Taylor had attempted to cultivate coffee on the island before to Lipton's arrival, but the crops were destroyed by a leaf-blight. The two men began on a commercial enterprise that would outlast their lives with Lipton's assistance. Thomas Lipton would sit with a cup of tea in hand and proudly look over his land from Lipton's Seat, a popular vantage point. The overlook still offers one of the greatest views, and there's even a life-sized statue of Lipton on a seat where you can snap photos! It is best to visit early in the morning to escape the crowds and late-morning fog.",
           7.23905648457663,
           79.8402454549134),
